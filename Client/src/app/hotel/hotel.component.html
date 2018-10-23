@@ -1,0 +1,335 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<!doctype html>
+<html>
+<head>
+  <style type="text/css">
+    .container{
+      width: 100%;
+    }
+    .progresbar{
+      counter-reset: step;
+    }
+    .progresbar li{
+      list-style-type: none;
+      float: left;
+      width:  33.33%;
+      position: relative;
+      text-align: center;
+    }
+    .progresbar li:before{
+      content: counter(step);
+      counter-increment: step;
+      width: 40px;
+      height: 40px;
+      line-height: 40px;
+      border: 2px solid #ddd;
+      display: block;
+      text-align: center;
+      margin: 0 auto 10px auto;
+      border-radius: 50%;
+      background-color: white;
+    }
+    .progresbar li:after{
+      content: '';
+      position: absolute;
+      width: 100%;
+      height: 3px;
+      background-color: #ddd;
+      top: 15px;
+      left: -50%;
+      z-index: -1;
+    }
+    .progresbar li:first-child:after{
+      content: none;
+    }
+    .progresbar li.actived{
+      color: purple;
+    }
+    .progresbar li.actived:before{
+      border-color: purple;
+    }
+    .progresbar li.actived:after{
+      background-color: purple;
+    }
+    .panel1{
+      width: 25%;
+      height: 450px;
+      background-color: antiquewhite;
+      text-align: left;
+      float: left;
+    }
+    .panel2{
+      width: 25%;
+      height: 450px;
+      background-color: antiquewhite;
+      text-align: left;
+      float: left;
+    }
+    .panel3{
+      width: 25%;
+      height: 450px;
+      background-color: antiquewhite;
+      text-align: left;
+      float: left;
+    }
+    .panel4{
+      width: 25%;
+      height: 450px;
+      background-color: antiquewhite;
+      float: left;
+    }
+    .panelmaster{
+      position: absolute;
+      left: 10%;
+      right: 10%;
+      width: 80%;
+      height:  450px;
+      background-color: antiquewhite;
+    }
+    .form-control{
+      padding: 5px;
+      float: right;
+    }
+    .form-control2{
+      padding: 5px;
+    }
+    footer{
+      width: 100%;
+      height: 70px;
+      line-height: 70px;
+      background: rgb(150, 121, 151);
+      text-align: center
+    }
+    .panelMid{
+      width: 100%;
+      height: 540px;
+      background-color: white;
+    }
+  </style>
+  <meta charset="utf-8">
+
+  <title>  G20_Booking</title>
+
+</head>
+<body>
+<div id = "top">
+  <h1 style = "color:white;" > G20 Booking</h1>
+  <ul>
+    <li  id="activedtop" ><a>Hotel Detail</a></li>
+    <li><a>Update Room Status</a></li>
+    <li><a>LogOut</a></li>
+  </ul>
+</div>
+<div id="emty">
+  <h1></h1>
+</div>
+<div class="container">
+  <ul class="progresbar">
+    <li class="actived">Hotel Detail</li>
+    <li>Room Type</li>
+    <li>Rooms</li>
+  </ul>
+  <br>
+  <br>
+  <br>
+  <br>
+</div>
+<div class ="panelMid">
+<div class="panelmaster">
+  <br>
+  <div class="panel1">
+    <form id="forminput">
+      <div class="form-control">
+        ชื่อโรงแรม :
+        <br>
+        <br>
+
+        ชื่อที่อยู่ :
+        <br>
+        <br>
+
+        หมู่ที่ :
+        <br>
+        <br>
+        หมู่บ้าน :
+        <br>
+        <br>
+        ถนน :
+        <br>
+        <br>
+        จังหวัด :
+        <br>
+        <br>
+        เบอร์โทรศัพท์ :
+        <br>
+        <br>
+        FAX :
+        <br>
+        <br>
+      </div>
+    </form>
+  </div>
+  <div class="panel2">
+    <form class="form-control2">
+      <input type="text" name="" placeholder=" ชื่อโรงแรม" id="Hotelname0">
+      <br>
+      <input type="text" name="" placeholder=" ชื่อที่อยู่" id="Hotelname">
+      <br>
+      <input type="text" name="" placeholder=" หมู่ที่" id="Hotelname">
+      <br>
+      <input type="text" name="" placeholder=" หมู่บ้าน" id="Hotelname">
+      <br>
+      <input type="text" name="" placeholder=" ถนน" id="Hotelname">
+      <br>
+      <select id="Hotelname">
+          <option value="volvo">กรุณาเลือกจังหวัด </option>
+          <option value="volvo">กรุงเทพมหานคร </option>
+          <option value="saab">กระบี่ </option>
+          <option value="mercedes">กาญจนบุรี </option>
+          <option value="audi">กาฬสินธุ์ </option>
+          <option value="audi">กำแพงเพชร  </option>
+          <option value="audi">ขอนแก่น </option>
+          <option value="audi">จันทบุรี  </option>
+          <option value="audi">ฉะเชิงเทรา </option>
+          <option value="audi">ชลบุรี</option>
+          <option value="audi">ชัยนาท </option>
+          <option value="audi">ชัยภูมิ  </option>
+          <option value="audi">ชุมพร  </option>
+          <option value="audi">เชียงราย  </option>
+          <option value="audi">เชียงใหม่ </option>
+          <option value="audi">ตรัง  </option>
+          <option value="audi">ตราด  </option>
+          <option value="audi">ตาก  </option>
+          <option value="audi">นครนายก  </option>
+          <option value="audi">นครปฐม  </option>
+          <option value="audi">นครพนม  </option>
+          <option value="audi">นครราชสีมา   </option>
+          <option value="audi">นครศรีธรรมราช   </option>
+          <option value="audi">นครสวรรค์   </option>
+          <option value="audi">นนทบุรี  </option>
+          <option value="audi">นราธิวาส   </option>
+          <option value="audi">น่าน   </option>
+          <option value="audi">บึงกาฬ   </option>
+          <option value="audi">บุรีรัมย์   </option>
+          <option value="audi">ปทุมธานี   </option>
+          <option value="audi">ประจวบคีรีขันธ์   </option>
+          <option value="audi">ปราจีนบุรี   </option>
+          <option value="audi">ปัตตานี   </option>
+          <option value="audi">พระนครศรีอยุธยา   </option>
+          <option value="audi">พังงา   </option>
+          <option value="audi">พัทลุง   </option>
+          <option value="audi">พิจิตร   </option>
+          <option value="audi">พิษณุโลก   </option>
+          <option value="audi">เพชรบุรี   </option>
+          <option value="audi">เพชรบูรณ์   </option>
+          <option value="audi">แพร่   </option>
+          <option value="audi">พะเยา   </option>
+          <option value="audi">ภูเก็ต   </option>
+          <option value="audi">มหาสารคาม   </option>
+          <option value="audi">มุกดาหาร   </option>
+          <option value="audi">แม่ฮ่องสอน   </option>
+          <option value="audi">ยะลา   </option>
+          <option value="audi">ยโสธร   </option>
+          <option value="audi">ร้อยเอ็ด    </option>
+          <option value="audi">ระนอง   </option>
+          <option value="audi">ระยอง    </option>
+          <option value="audi">ราชบุรี    </option>
+          <option value="audi">ลพบุรี    </option>
+          <option value="audi">ลำปาง    </option>
+          <option value="audi">ลำพูน   </option>
+          <option value="audi">เลย    </option>
+          <option value="audi">ศรีสะเกษ    </option>
+          <option value="audi">สกลนคร    </option>
+          <option value="audi">สงขลา    </option>
+          <option value="audi">สตูล    </option>
+          <option value="audi">สมุทรปราการ    </option>
+          <option value="audi">สมุทรสงคราม    </option>
+          <option value="audi">สมุทรสาคร    </option>
+          <option value="audi">สระแก้ว    </option>
+          <option value="audi">สระบุรี    </option>
+          <option value="audi">สิงห์บุรี     </option>
+          <option value="audi">สุโขทัย    </option>
+          <option value="audi">สุพรรณบุรี    </option>
+          <option value="audi">สุราษฎร์ธานี    </option>
+          <option value="audi">สุรินทร์    </option>
+          <option value="audi">หนองคาย    </option>
+          <option value="audi">หนองบัวลำภู    </option>
+          <option value="audi">อ่างทอง   </option>
+          <option value="audi">อุดรธานี    </option>
+          <option value="audi">อุทัยธานี    </option>
+          <option value="audi">อุตรดิตถ์    </option>
+          <option value="audi">อุบลราชธานี    </option>
+          <option value="audi">อำนาจเจริญ   </option>
+        </select>
+      <br>
+      <input type="text" name="" placeholder=" เบอร์โทรศัพท์" id="Hotelname">
+      <br>
+      <input type="text" name="" placeholder=" เบอร์โทรศัพท์" id="Hotelname">
+    </form>
+  </div>
+  <div class="panel3">
+    <form id="forminput">
+      <div class="form-control">
+        Hotel name (English) :
+        <br>
+        <br>
+        เลขที่ :
+        <br>
+        <br>
+        อาคาร :
+        <br>
+        <br>
+        ตรอก/ซอย :
+        <br>
+        <br>
+        ตำบล/แขวง :
+        <br>
+        <br>
+        รหัสไปรษณีย์ :
+        <br>
+        <br>
+        เบอร์โทรศัพท์ :
+        <br>
+        <br>
+      </div>
+    </form>
+
+  </div>
+  <div class="panel4">
+    <div class="form-control2">
+      <input type="text" name="" placeholder=" Enter hotel name" id="Hotelname0">
+      <br>
+      <input type="text" name="" placeholder=" เลขที่" id="Hotelname">
+      <br>
+      <input type="text" name="" placeholder=" อาคาร" id="Hotelname">
+      <br>
+      <input type="text" name="" placeholder=" ตรอก/ซอย" id="Hotelname">
+      <br>
+      <select id="Hotelname" >
+          <option value="volvo">โบสถ์</option>
+          <option value="saab">รังกาใหญ่</option>
+          <option value="opel">ท่าแดง</option>
+          <option value="audi">ในเมือง</option>
+        </select>
+      <br>
+      <input type="text" name="" placeholder=" ระบุเป็นตัวเลข" id="Hotelname">
+      <br>
+      <input type="text" name="" placeholder=" หมายเลข FAX" id="Hotelname">
+      <br>
+      <br>
+      <br>
+      <br>
+        <input [routerLink]="['/room-type']" value="NEXT"  id="botton">
+      </div>
+  </div>
+  
+</div>
+</div>
+<footer>
+
+</footer>
+</body>
+
+
+
+</html>
